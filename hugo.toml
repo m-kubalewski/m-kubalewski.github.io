@@ -1,8 +1,105 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+# Blog title
+title = "Michał Kubalewski"
 
+# Base URL
+baseURL = "/"
 
+# Language (defines date formatting as well)
+languageCode = "en-us"
+defaultContentLanguage = "en-gb"
+
+# Emoji support
+enableEmoji = true
+
+# Ignore error of loading additional scripts.
+ignoreErrors = ["additional-script-loading-error"]
+
+# Importing theme as a hugo module
 [module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.87.0"
   [[module.imports]]
     path = "github.com/hugo-sid/hugo-blog-awesome"
+    disable = false
+
+# Markup settings
+[markup]
+  [markup.highlight]
+    # noClasses = false -> Code highlighting is enables
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2
+		endLevel = 4
+		ordered = false
+
+
+# Multilangual settings
+[Languages.en-gb]
+  languageName = "English"
+  languageCode = "en-gb"
+  contentDir = "content"
+  weight = 1
+
+  [Languages.en-gb.menu]
+  [[Languages.en-gb.menu.main]]
+    pageRef="/"
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[Languages.en-gb.menu.main]]
+    pageRef="posts"
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+  [[Languages.en-gb.menu.main]]
+    pageRef="about"
+    name = 'About'
+    url = '/about/'
+    weight = 30
+
+[Languages.en-gb.params]
+  sitename = "Michał Kubalewski"
+  defaultColor = "auto"
+  description = "Minimal Hugo blog theme with light and dark mode support"
+  mainSections = ['home']
+  toc = false
+  tocOpen = false
+  goToTop = true
+  additionalScripts = ['js/custom.js', 'js/custom-2.js']
+  dateFormat = "01-12-2024" 
+  rssFeedDescription = "summary" 
+
+[Languages.en-gb.params.author]
+  avatar = ""
+  intro = "Michał Kubalewski"
+  name = "Michał Kubalewski"
+  description = "Personal blog of Michał Kubalewski"
+
+[Languages.en-gb.params.webmanifest]
+  name = "sitename"
+  short_name = "sitename"
+  start_url = "/"
+  theme_color = "#434648"
+  background_color = "#fff"
+  display = "standalone"
+
+# Browser parameters
+[params.browserconfig]
+  TileColor = "#2d89ef" # default windows 10 blue tile color
+
+# Socials
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/m-kubalewski"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:michalkubalewski@outlook.com"
+
+# Other parameters
+[params]
+  goToTop = true
+  math = true
