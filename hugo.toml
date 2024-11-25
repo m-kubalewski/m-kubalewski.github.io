@@ -76,7 +76,7 @@ ignoreErrors = ["additional-script-loading-error"]
   avatar = ""
   intro = "Michał Kubalewski"
   name = "Michał Kubalewski"
-  description = "Personal blog of Michał Kubalewski"
+  description = "Hi! Welcome to my personal blog. Hope you will enjoy your stay here."
 
 [Languages.en-gb.params.webmanifest]
   name = "sitename"
