@@ -69,7 +69,7 @@ ignoreErrors = ["additional-script-loading-error"]
   tocOpen = false
   goToTop = true
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
-  dateFormat = "01-12-2024" 
+  dateFormat = "" 
   rssFeedDescription = "summary" 
 
 [Languages.en-gb.params.author]
